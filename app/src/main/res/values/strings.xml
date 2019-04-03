@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TestAndroid</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="continue_do">Continue</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="info">Info</string>
+    <string name="list">List</string>
+    <string name="map">Map</string>
+    <string name="text_format_discount">%s%%</string>
+
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="about_company">About company</string>
+    <string name="promotions">Promotions</string>
+    <string name="today_work_time_format">Today %s - %s</string>
+    <string name="title_activity_choive_orgavization_maps">Map</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.stolbunov.roman.testandroid.ui.screens.choice_city.ChoiceCityFragmentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="56dp"
+            app:cardCornerRadius="8dp"
+            app:contentPaddingRight="10dp">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spin_country"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:setDataSpin="@{vm.countriesLD}" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spin_city"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:setDataSpin="@{vm.citiesBySelectedCountryLD}" />
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_continue"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/round_button_selector"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:onClick="@{v -> vm.createResult()}"
+            android:paddingStart="36dp"
+            android:paddingEnd="16dp"
+            android:text="@string/continue_do"
+            android:textColor="@android:color/white"
+            app:setEnabled="@{vm.isCorrectSelectedData}" />
+    </LinearLayout>
+</layout>

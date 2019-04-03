@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3BDA93</color>
+    <color name="colorPrimaryDark">#018D6B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorButtonOff">#9AD5B7</color>
+    <color name="indicatorPageColor">#E3E7E5</color>
+    <color name="colorBackgroundButton">#E3E7E5</color>
+
+    <!--category colors-->
+    <color name="colorRestaurantsCafe">#F354CA</color>
+    <color name="colorEntertainment">#B675FA</color>
+    <color name="colorShops">#E4E441</color>
+    <color name="colorSport">#37B6DF</color>
+    <color name="colorMedicine">#F84343</color>
+    <color name="colorClubsBars">#8C7AC0</color>
+    <color name="colorBeautyHealth">#A4C74A</color>
+    <color name="colorHotels">#4DB3B3</color>
+    <color name="colorAutoMoto">#5F5FF5</color>
+    <color name="colorAnimalsPlants">#7BC25B</color>
+    <color name="colorServices">#FFD600</color>
+
+</resources>

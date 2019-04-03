@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.stolbunov.roman.testandroid.ui.screens.organization_information.OrganizationInfoViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/image_organization_vp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:setDataVP="@{vm.pictureUriLD}"
+            app:selectedPosition="@={vm.currentImagePositionLD}" />
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:elevation="@dimen/default_line_indicator_gap_width"
+            app:centered="true"
+            app:fillColor="@color/colorPrimary"
+            app:pageColor="@color/indicatorPageColor"
+            app:radius="3.5dp" />
+
+    </LinearLayout>
+</layout>

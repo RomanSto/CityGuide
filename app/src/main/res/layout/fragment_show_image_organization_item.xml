@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="uri"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_company"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:setUri="@{uri}"
+            tools:src="@drawable/ic_launcher_background" />
+
+    </LinearLayout>
+</layout>
