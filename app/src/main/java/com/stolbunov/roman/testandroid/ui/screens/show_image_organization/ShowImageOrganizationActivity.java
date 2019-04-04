@@ -33,14 +33,14 @@ public class ShowImageOrganizationActivity extends DaggerAppCompatActivity imple
         setContentView(R.layout.activity_show_image_organization);
 
         Intent intent = getIntent();
-        int position = intent.getIntExtra(KEY_SELECTED_IMAGE_POSITION, 0);
+        selectedPosition = intent.getIntExtra(KEY_SELECTED_IMAGE_POSITION, 0);
         ArrayList<Picture> uri = intent.getParcelableArrayListExtra(KEY_IMAGE_LIST_URI);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
                     .add(R.id.container_image,
-                            ShowImageOrganizationFragment.newInstance(position, uri),
+                            ShowImageOrganizationFragment.newInstance(selectedPosition, uri),
                             "ShowImageOrganizationFragment")
                     .commitNow();
         }
@@ -67,7 +67,7 @@ public class ShowImageOrganizationActivity extends DaggerAppCompatActivity imple
     public void onBackPressed() {
         setResult(
                 RESULT_OK,
-                OrganizationInfoActivity.getIntentForSelectedPosition(this, selectedPosition));
+                OrganizationInfoActivity.getIntentForSelectedPosition(selectedPosition));
         finish();
     }
 }

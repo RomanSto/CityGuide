@@ -33,8 +33,8 @@ public class OrganizationInfoActivity extends DaggerAppCompatActivity implements
         return intent;
     }
 
-    public static Intent getIntentForSelectedPosition(Context packageContext, int selectedPosition) {
-        Intent intent = new Intent(packageContext, OrganizationInfoActivity.class);
+    public static Intent getIntentForSelectedPosition(int selectedPosition) {
+        Intent intent = new Intent();
         intent.putExtra(KEY_SELECTED_POSITION, selectedPosition);
         return intent;
     }
