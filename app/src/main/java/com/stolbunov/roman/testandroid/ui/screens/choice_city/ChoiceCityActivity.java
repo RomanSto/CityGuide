@@ -131,7 +131,7 @@ public class ChoiceCityActivity extends DaggerAppCompatActivity implements OnRes
     }
 
     private void startGallery() {
-        Intent intent = new Intent(Intent.ACTION_PICK);
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType("image/*");
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_IMAGE_GALLERY);
     }
